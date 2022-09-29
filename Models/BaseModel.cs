@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace DraggableControlsDemo
+namespace DraggableControlsDemo.Models
 {
 
     public class NotifyModel : DependencyObject, INotifyPropertyChanged
@@ -21,7 +21,7 @@ namespace DraggableControlsDemo
             if (string.IsNullOrWhiteSpace(propertyName))
                 return false;
 
-            if (object.Equals(field, value))
+            if (Equals(field, value))
             { return false; }
             field = value;
             OnPropertyChanged(propertyName);

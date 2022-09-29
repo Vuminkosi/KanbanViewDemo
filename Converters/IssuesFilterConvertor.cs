@@ -5,8 +5,9 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DraggableControlsDemo.Models;
 
-namespace DraggableControlsDemo
+namespace DraggableControlsDemo.Converters
 {
     public class IssuesFilterConvertor : BaseValueConvertor<IssuesFilterConvertor>
     {

@@ -1,11 +1,13 @@
-﻿using System;
+﻿using DraggableControlsDemo.Models;
+
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DraggableControlsDemo
+namespace DraggableControlsDemo.ViewModels
 {
     public class MainWindowViewModel : NotifyModel
     {
@@ -92,11 +94,11 @@ namespace DraggableControlsDemo
             if (status == IssueStatus.Closed)
                 model.ClosedCreated = DateTime.Now;
 
-            var issuesStore = new ObservableCollection<IssueModel>(Issues);
+            //var issuesStore = new ObservableCollection<IssueModel>(Issues);
 
-            Issues = new ObservableCollection<IssueModel>(issuesStore.OrderByDescending(x => x.StatusChangedDate));
+            //Issues = new ObservableCollection<IssueModel>(issuesStore.OrderByDescending(x => x.StatusChangedDate));
             //Notify UI
-            OnPropertyChanged(nameof(Issues)); 
+            OnPropertyChanged(nameof(Issues));
 
             // call the server/api for persistence
         }

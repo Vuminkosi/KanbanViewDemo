@@ -9,7 +9,11 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Interactivity;
 
-namespace DraggableControlsDemo
+using DraggableControlsDemo.Models;
+using DraggableControlsDemo.ViewModels;
+using DraggableControlsDemo.Views.Controls;
+
+namespace DraggableControlsDemo.Behaviors
 {
 
 

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Globalization;
 
-namespace DraggableControlsDemo
+namespace DraggableControlsDemo.Converters
 {
     public class WindowActualWidthToWidthConvetor : BaseValueConvertor<WindowActualWidthToWidthConvetor>
     {
@@ -9,7 +9,7 @@ namespace DraggableControlsDemo
         {
 
             var windowActualWidth = (double)value;
-              
+
             return windowActualWidth - 20;
         }
 

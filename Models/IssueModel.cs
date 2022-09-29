@@ -5,7 +5,7 @@ using System.Printing.Interop;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DraggableControlsDemo
+namespace DraggableControlsDemo.Models
 {
     public class IssueModel : NotifyModel
     {
@@ -19,7 +19,7 @@ namespace DraggableControlsDemo
         private int issueNo;
         private string? description;
 
-        public string? Description { get => description; set => SetProperty(ref description,value); }
+        public string? Description { get => description; set => SetProperty(ref description, value); }
         public int IssueNo { get => issueNo; set => SetProperty(ref issueNo, value); }
         public string? About { get => about; set => SetProperty(ref about, value); }
         public string? Owner { get => _owner; set => SetProperty(ref _owner, value); }

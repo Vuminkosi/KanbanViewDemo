@@ -4,7 +4,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DraggableControlsDemo"
+        xmlns:controls="clr-namespace:DraggableControlsDemo.Views.Controls"
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:convetors="clr-namespace:DraggableControlsDemo.Converters"
+        xmlns:behaviors="clr-namespace:DraggableControlsDemo.Behaviors"
         WindowState="Maximized"
         Title="Drag and drop"
         mc:Ignorable="d" 
@@ -23,7 +26,7 @@
         <ScrollViewer HorizontalScrollBarVisibility="Auto"
                       Style="{StaticResource MaterialDesignScrollViewer}"
                       Width="{Binding ActualWidth, 
-              RelativeSource = {RelativeSource AncestorType = {x:Type Window}},Converter={local:WindowActualWidthToWidthConvetor}}"
+              RelativeSource = {RelativeSource AncestorType = {x:Type Window}},Converter={convetors:WindowActualWidthToWidthConvetor}}"
                       MaxHeight="1000"
                       VerticalScrollBarVisibility="Auto"
                       CanContentScroll="True"
@@ -38,50 +41,50 @@
                     <ColumnDefinition Width="360" />
                 </Grid.ColumnDefinitions>
 
-                <local:KanbanColumnEditorControl Grid.Column="0"
+                <controls:KanbanColumnEditorControl Grid.Column="0"
                                                  ColumnName="Created"
                                                  Margin=" 5 10"
                                                  AllowDrop="True"
                                                  x:Name="Created"
-                                                 FilteredIssues="{Binding Issues,Converter={local:IssuesFilterConvertor},ConverterParameter=Created}" />
+                                                    FilteredIssues="{Binding Issues,Converter={convetors:IssuesFilterConvertor},ConverterParameter=Created}" />
 
-                <local:KanbanColumnEditorControl Grid.Column="1"
+                <controls:KanbanColumnEditorControl Grid.Column="1"
                                                  ColumnName="Opened"
                                                  Margin="5 10"
                                                  x:Name="Opened"
                                                  AllowDrop="True"
-                                                 FilteredIssues="{Binding Issues,Converter={local:IssuesFilterConvertor},ConverterParameter=Opened}" />
+                                                    FilteredIssues="{Binding Issues,Converter={convetors:IssuesFilterConvertor},ConverterParameter=Opened}" />
 
-                <local:KanbanColumnEditorControl Grid.Column="2"
+                <controls:KanbanColumnEditorControl Grid.Column="2"
                                                  ColumnName="Waiting Assignment"
                                                  Margin="5 10"
                                                  AllowDrop="True"
                                                  x:Name="WaitingAssignment"
-                                                 FilteredIssues="{Binding Issues,Converter={local:IssuesFilterConvertor},ConverterParameter=WaitingAssignment}" />
+                                                    FilteredIssues="{Binding Issues,Converter={convetors:IssuesFilterConvertor},ConverterParameter=WaitingAssignment}" />
 
-                <local:KanbanColumnEditorControl Grid.Column="3"
+                <controls:KanbanColumnEditorControl Grid.Column="3"
                                                  ColumnName="InProgress"
                                                  Margin="5 10"
                                                  AllowDrop="True"
                                                  x:Name="InProgress"
-                                                 FilteredIssues="{Binding Issues,Converter={local:IssuesFilterConvertor},ConverterParameter=InProgress}" />
+                                                    FilteredIssues="{Binding Issues,Converter={convetors:IssuesFilterConvertor},ConverterParameter=InProgress}" />
 
-                <local:KanbanColumnEditorControl Grid.Column="4"
+                <controls:KanbanColumnEditorControl Grid.Column="4"
                                                  ColumnName="Review"
                                                  Margin="5 10"
                                                  AllowDrop="True"
                                                  x:Name="Review"
-                                                 FilteredIssues="{Binding Issues,Converter={local:IssuesFilterConvertor},ConverterParameter=Review}" />
+                                                    FilteredIssues="{Binding Issues,Converter={convetors:IssuesFilterConvertor},ConverterParameter=Review}" />
 
-                <local:KanbanColumnEditorControl Grid.Column="5"
+                <controls:KanbanColumnEditorControl Grid.Column="5"
                                                  ColumnName="Closed"
                                                  AllowDrop="True" 
                                                  Margin="5 10"
                                                  x:Name="Closed"
-                                                 FilteredIssues="{Binding Issues,Converter={local:IssuesFilterConvertor},ConverterParameter=Closed}" />
+                                                    FilteredIssues="{Binding Issues,Converter={convetors:IssuesFilterConvertor},ConverterParameter=Closed}" />
 
                 <i:Interaction.Behaviors>
-                    <local:ControlBehaviour />
+                    <behaviors:ControlBehaviour />
                 </i:Interaction.Behaviors>
             </Grid>
         </ScrollViewer>

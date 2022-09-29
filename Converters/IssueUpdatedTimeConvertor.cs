@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Globalization;
 
-namespace DraggableControlsDemo
+namespace DraggableControlsDemo.Converters
 {
     public class IssueUpdatedTimeConvertor : BaseValueConvertor<IssueUpdatedTimeConvertor>
     {

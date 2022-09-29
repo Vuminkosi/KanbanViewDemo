@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace DraggableControlsDemo
+namespace DraggableControlsDemo.Views.Controls
 {
     /// <summary>
     /// Interaction logic for IssueItemControl.xaml
